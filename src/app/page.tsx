@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       id: 3,
-      src: '/vid3.mp4',
+      src: '/vid5.mp4',
       title: 'Suburban Housing Estate',
       description: 'Family-friendly neighborhood tour'
     }
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="absolute inset-0 circular-gradient pointer-events-none"></div>
         
         {/* Navigation - Fixed and Transparent */}
-        <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4">
+        <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-6">
           <div className="max-w-7xl mx-auto relative flex items-center justify-between">
             {/* Left - Logo */}
             <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
@@ -145,7 +145,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Content */}
-        <main className="relative z-10 px-4 sm:px-6 lg:px-8 pt-32 pb-48 sm:pt-48 sm:pb-56">
+        <main className="relative z-10 px-4 sm:px-6 lg:px-8 pt-36 pb-48 sm:pt-52 sm:pb-56">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-1 bg-gray-700/50 border border-gray-600/50 rounded-full text-gray-300 text-xs font-medium mb-8">
@@ -175,9 +175,9 @@ export default function Home() {
           </div>
 
           {/* Video Showcase Carousel */}
-          <div className="max-w-7xl mx-auto mt-32">
+          <div className="w-full mx-auto mt-32" style={{ maxWidth: '88rem' }}>
             {/* Video Container */}
-            <div className="relative w-full max-w-7xl mx-auto">
+            <div className="relative w-full mx-auto">
               <div className="relative aspect-video overflow-hidden shadow-2xl" style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)' }}>
                 <video 
                   key={videos[currentVideoIndex].id}
@@ -229,7 +229,7 @@ export default function Home() {
       </AuroraBackground>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="relative z-10 px-4 sm:px-6 lg:px-8 py-32" style={{ backgroundColor: '#121212' }}>
+      <section id="how-it-works" className="relative z-10 px-4 sm:px-6 lg:px-8 py-48" style={{ backgroundColor: '#121212' }}>
         <LivingRendersCarousel />
       </section>
 
