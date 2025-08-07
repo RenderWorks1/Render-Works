@@ -61,7 +61,7 @@ export default function HowItWorksPage() {
                 <h3 className="text-xl font-semibold mb-4 font-inter text-white">Option A</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   We Create the Renders<br />
-                  No 3D visuals yet? We'll create them from your plans and drawings.
+                  No 3D visuals yet? We&apos;ll create them from your plans and drawings.
                 </p>
               </div>
               {/* Option B Graphic */}
@@ -74,7 +74,7 @@ export default function HowItWorksPage() {
                 <h3 className="text-xl font-semibold mb-4 font-inter text-white">Option B</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   You Have Renders<br />
-                  Already have 3D renders? We'll transform them into stunning videos.
+                  Already have 3D renders? We&apos;ll transform them into stunning videos.
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function HowItWorksPage() {
                   Option A — We Create the Renders
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed font-inter mb-8">
-                  No 3D visuals yet? No problem. Simply send us your development assets and we'll transform them into high-quality, photorealistic 3D renders.
+                  No 3D visuals yet? No problem. Simply send us your development assets and we&apos;ll transform them into high-quality, photorealistic 3D renders.
                 </p>
                 <h3 className="text-2xl font-bold mb-4 font-inter text-white">What You Can Send Us</h3>
                 <ul className="list-disc pl-6 space-y-3 text-gray-300 mb-8 text-base">
@@ -132,7 +132,7 @@ export default function HowItWorksPage() {
                   Option B — You Have Renders
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed font-inter mb-8">
-                  Already have 3D renders? Send us your finished visuals and we'll transform them into cinematic marketing videos using advanced AI and creative editing.
+                  Already have 3D renders? Send us your finished visuals and we&apos;ll transform them into cinematic marketing videos using advanced AI and creative editing.
                 </p>
                 <h3 className="text-2xl font-bold mb-4 font-inter text-white">What You Can Send Us</h3>
                 <ul className="list-disc pl-6 space-y-3 text-gray-300 mb-8 text-base">
@@ -144,7 +144,7 @@ export default function HowItWorksPage() {
                 </ul>
                 <h3 className="text-2xl font-bold mb-4 font-inter text-white mt-10">What We Deliver</h3>
                 <p className="text-gray-300 leading-relaxed text-base">
-                  We'll craft cinematic video walkthroughs from your 3D renders, complete with dynamic camera moves, music, and branding. Perfect for marketing, listings, and presentations—ready to impress your audience.
+                  We&apos;ll craft cinematic video walkthroughs from your 3D renders, complete with dynamic camera moves, music, and branding. Perfect for marketing, listings, and presentations—ready to impress your audience.
                 </p>
               </div>
             </div>
