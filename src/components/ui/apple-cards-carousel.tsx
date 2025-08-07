@@ -1,20 +1,7 @@
 "use client";
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  createContext,
-  useContext,
-} from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
-} from "@tabler/icons-react";
+import React, { createContext } from "react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import Image, { ImageProps } from "next/image";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+import { ImageProps } from "next/image";
 
 interface CarouselProps {
   items: React.ReactElement[];
@@ -36,16 +23,16 @@ export const CarouselContext = createContext<{
   currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+export const Carousel = ({ items }: CarouselProps) => {
   return (
     <CarouselContext.Provider
       value={{ onCardClose: () => {}, currentIndex: 0 }}
     >
       <div className="relative w-full">
         <div className="flex flex-row justify-center gap-12 px-4 py-10 md:py-20">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <div
-              key={"card" + index}
+              key={"card" + Math.random()}
               className="rounded-3xl"
             >
               {item}
@@ -59,8 +46,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
 export const Card = ({
   card,
-  index,
-  layout = false,
 }: {
   card: Card;
   index: number;
