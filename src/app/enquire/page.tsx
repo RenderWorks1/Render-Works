@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 
 export default function EnquirePage() {
@@ -14,27 +16,27 @@ export default function EnquirePage() {
         <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4">
           <div className="max-w-7xl mx-auto relative flex items-center justify-between">
             {/* Left - Logo */}
-            <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <span className="text-xl font-bold text-white">Render Works</span>
               {/* Main Logo Image */}
-              <img src="/Mainlogo.png" alt="Render Works Logo" width={40} height={40} className="object-contain -mt-1" />
-            </a>
+              <Image src="/Mainlogo.png" alt="Render Works Logo" width={40} height={40} className="object-contain -mt-1" />
+            </Link>
 
             {/* Center Navigation - Large Pill with White Border */}
             <div className="hidden md:flex items-center border border-white/20 rounded-full pl-1 pr-1 py-1 absolute left-1/2 transform -translate-x-1/2" style={{ backgroundColor: '#121212' }}>
               {/* How It Works - Inactive */}
-              <a href="/" className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white rounded-full transition-all duration-200 font-medium text-sm">
+              <Link href="/" className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white rounded-full transition-all duration-200 font-medium text-sm">
                 <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
                 <span>How It Works</span>
-              </a>
+              </Link>
               
               {/* Benefits - Inactive */}
-              <a href="/#benefits" className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white rounded-full transition-all duration-200 font-medium text-sm">
+              <Link href="/#benefits" className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white rounded-full transition-all duration-200 font-medium text-sm">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                 </svg>
                 <span>Benefits</span>
-              </a>
+              </Link>
               
               {/* Enquire - Active */}
               <button className="flex items-center space-x-2 px-3 py-2 bg-gray-200 text-gray-900 rounded-full transition-all duration-200 font-medium text-sm">
@@ -58,12 +60,12 @@ export default function EnquirePage() {
           <div className="max-w-4xl mx-auto text-center">
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-200 mb-8 leading-tight font-inter tracking-tight">
-              Let's Start Your Project
+              Let&apos;s Start Your Project
             </h1>
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-gray-200 mb-16 max-w-2xl mx-auto leading-relaxed font-inter font-medium">
-              Ready to bring your development to life? Get in touch and we'll discuss your vision.
+              Ready to bring your development to life? Get in touch and we&apos;ll discuss your vision.
             </p>
 
             {/* Email Form */}

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import LivingRendersCarousel from '@/components/ui/living-renders-carousel';
 import BenefitsCometCards from '@/components/ui/benefits-comet-cards';
 import { AuroraBackground } from '@/components/ui/aurora-background';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -88,11 +89,11 @@ export default function Home() {
         <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4">
           <div className="max-w-7xl mx-auto relative flex items-center justify-between">
             {/* Left - Logo */}
-            <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <span className="text-xl font-bold text-white">Render Works</span>
               {/* Main Logo Image */}
               <Image src="/Mainlogo.png" alt="Render Move Logo" width={40} height={40} className="object-contain -mt-1" />
-            </a>
+            </Link>
 
             {/* Center Navigation - Large Pill with White Border */}
             <div className="hidden md:flex items-center border border-white/20 rounded-full pl-1 pr-3 py-1 absolute left-1/2 transform -translate-x-1/2" style={{ backgroundColor: '#121212' }}>

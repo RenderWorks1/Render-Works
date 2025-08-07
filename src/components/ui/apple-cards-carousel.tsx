@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext } from "react";
 import { cn } from "@/lib/utils";
-import { ImageProps } from "next/image";
+import Image, { ImageProps } from "next/image";
 
 interface CarouselProps {
   items: React.ReactElement[];
@@ -81,7 +81,7 @@ export const BlurImage = ({
   ...rest
 }: ImageProps) => {
   return (
-    <img
+    <Image
       className={cn(
         "h-full w-full object-cover",
         className,
