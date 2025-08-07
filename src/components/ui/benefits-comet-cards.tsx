@@ -8,9 +8,9 @@ export default function BenefitsCometCards() {
           <CometCard key={item?.link}>
             <div className="flex w-full cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-6 h-80">
               <div className="flex-1 flex flex-col justify-start">
-                <div className="font-mono text-white py-8">
-                  <div className="text-xl font-medium mb-6 px-4">{item.title}</div>
-                  <div className="text-sm text-gray-300 leading-relaxed px-4">{item.description}</div>
+                <div className="font-sans text-white py-6">
+                  <div className="text-xl font-medium mb-8 px-4">{item.title}</div>
+                  <div className="text-base text-gray-300 leading-relaxed px-4">{item.description}</div>
                 </div>
               </div>
             </div>

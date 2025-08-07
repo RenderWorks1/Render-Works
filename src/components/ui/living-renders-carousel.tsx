@@ -110,11 +110,11 @@ const data = [
   },
   {
     category: "Step 03",
-    title: "Use in Marketing",
+    title: "Ready to Showcase",
     src: "/layout2.png",
     content: <StepContent 
       stepNumber="Step 03"
-      title="Use in Marketing"
+      title="Ready to Showcase"
       description="Deploy your videos across all marketing channels to boost sales and buyer confidence."
       details={[
         "Perfect for social media, websites, and presentations",

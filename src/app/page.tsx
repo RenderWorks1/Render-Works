@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import LivingRendersCarousel from '@/components/ui/living-renders-carousel';
 import BenefitsCometCards from '@/components/ui/benefits-comet-cards';
+import FAQSection from '@/components/ui/faq-section';
+import FooterSection from '@/components/ui/footer-section';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import Link from 'next/link';
 
@@ -248,6 +250,12 @@ export default function Home() {
           <BenefitsCometCards />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Footer Section */}
+      <FooterSection />
     </>
   );
 }
