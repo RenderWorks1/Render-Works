@@ -79,7 +79,7 @@ const data = [
   {
     category: "Step 01",
     title: "Upload Your Renders",
-    src: "/development3.png",
+    src: "/Development3.png",
     content: <StepContent 
       stepNumber="Step 01"
       title="Upload Your Renders"
@@ -95,7 +95,7 @@ const data = [
   {
     category: "Step 02",
     title: "AI Video Generation",
-    src: "/ai3.png",
+    src: "/AI3.png",
     content: <StepContent 
       stepNumber="Step 02"
       title="AI Video Generation"

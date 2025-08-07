@@ -52,7 +52,7 @@ export default function Home() {
             <div className="flex items-center space-x-3">
               <span className="text-xl font-bold text-white">Render Works</span>
               {/* Main Logo Image */}
-              <Image src="/mainlogo.png" alt="Render Move Logo" width={40} height={40} className="object-contain -mt-1" />
+              <Image src="/Mainlogo.png" alt="Render Move Logo" width={40} height={40} className="object-contain -mt-1" />
             </div>
 
             {/* Center Navigation - Large Pill with White Border */}
