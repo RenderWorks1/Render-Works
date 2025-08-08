@@ -23,7 +23,7 @@ const slides = [
 export default function StickyShowcase() {
   return (
     <section className="relative bg-black text-white">
-      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-4 px-6 md:px-10 py-24">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-0 px-6 md:px-10 py-24">
         {/* Left: tall scrolling column */}
         <div className="space-y-0">
           {slides.map((s, i) => (
@@ -42,8 +42,9 @@ export default function StickyShowcase() {
         </div>
 
         {/* Right: sticky text that stays put */}
-        <aside className="md:sticky md:top-0 self-start flex items-center justify-center h-screen">
-          <div className="text-center">
+        <aside className="md:sticky md:top-0 self-start flex items-center justify-center h-screen relative">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: 'url(/render2.jpg)' }}></div>
+          <div className="text-center relative z-10">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-center">
               What We Offer
             </h2>
