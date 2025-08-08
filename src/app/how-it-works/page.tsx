@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,6 +8,27 @@ import CarouselDemo from '@/components/ui/carousel-demo';
 import CarouselDemoOptionB from '@/components/ui/carousel-demo-option-b';
 
 export default function HowItWorksPage() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      // Try again after a small delay if element not found
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <>
       <AuroraBackground className="bg-black dark:bg-black min-h-screen">
@@ -51,8 +74,14 @@ export default function HowItWorksPage() {
             </p>
             {/* Option Graphics */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24 mb-4">
-              {/* Option A Graphic */}
-              <div className="bg-[#18181b] rounded-2xl p-8 shadow-lg text-center">
+              {/* Option A Graphic - Clickable */}
+              <div 
+                onClick={() => {
+                  scrollToSection('option-a');
+                }}
+                className="bg-[#18181b] rounded-2xl p-8 shadow-lg text-center hover:bg-[#1f1f23] transition-colors duration-200 cursor-pointer"
+                style={{ zIndex: 10 }}
+              >
                 <div className="w-24 h-24 border-2 border-gray-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <svg className="w-12 h-12 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -64,8 +93,15 @@ export default function HowItWorksPage() {
                   No 3D visuals yet? We&apos;ll create them from your plans and drawings.
                 </p>
               </div>
-              {/* Option B Graphic */}
-              <div className="bg-[#18181b] rounded-2xl p-8 shadow-lg text-center">
+              
+              {/* Option B Graphic - Clickable */}
+              <div 
+                onClick={() => {
+                  scrollToSection('option-b');
+                }}
+                className="bg-[#18181b] rounded-2xl p-8 shadow-lg text-center hover:bg-[#1f1f23] transition-colors duration-200 cursor-pointer"
+                style={{ zIndex: 10 }}
+              >
                 <div className="w-24 h-24 border-2 border-gray-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <svg className="w-12 h-12 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 15V7a1 1 0 00-1.447-.894l-2 1z" />
@@ -83,7 +119,7 @@ export default function HowItWorksPage() {
       </AuroraBackground>
 
       {/* Option A Section - Full Width */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-32" style={{ backgroundColor: '#121212' }}>
+      <section id="option-a" className="relative z-10 px-4 sm:px-6 lg:px-8 py-32" style={{ backgroundColor: '#121212' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Column: Info */}
@@ -118,7 +154,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Option B Section - Full Width */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-32" style={{ backgroundColor: '#0a0a0a' }}>
+      <section id="option-b" className="relative z-10 px-4 sm:px-6 lg:px-8 py-32" style={{ backgroundColor: '#0a0a0a' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Column: Carousel Demo */}

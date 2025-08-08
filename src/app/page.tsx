@@ -7,6 +7,7 @@ import BenefitsCometCards from '@/components/ui/benefits-comet-cards';
 import FAQSection from '@/components/ui/faq-section';
 import FooterSection from '@/components/ui/footer-section';
 import { AuroraBackground } from '@/components/ui/aurora-background';
+import StickyShowcase from '@/components/ui/sticky-showcase';
 import Link from 'next/link';
 
 export default function Home() {
@@ -228,8 +229,11 @@ export default function Home() {
         </main>
       </AuroraBackground>
 
+      {/* What We Offer Section */}
+      <StickyShowcase />
+
       {/* How It Works Section */}
-      <section id="how-it-works" className="relative z-10 px-4 sm:px-6 lg:px-8 py-48" style={{ backgroundColor: '#121212' }}>
+      <section id="how-it-works" className="relative z-10 px-4 sm:px-6 lg:px-8 py-24" style={{ backgroundColor: '#121212' }}>
         <LivingRendersCarousel />
       </section>
 

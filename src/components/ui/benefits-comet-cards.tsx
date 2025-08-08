@@ -10,6 +10,10 @@ export default function BenefitsCometCards() {
               <div className="flex-1 flex flex-col justify-start">
                 <div className="font-sans text-white py-6">
                   <div className="text-xl font-medium mb-8 px-4">{benefit.title}</div>
+                  <div className="relative mb-6">
+                    <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-4"></div>
+                    <div className="absolute inset-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mx-4 blur-sm"></div>
+                  </div>
                   <div className="text-base text-gray-300 leading-relaxed px-4">{benefit.description}</div>
                 </div>
               </div>

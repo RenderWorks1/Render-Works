@@ -27,13 +27,13 @@ export default function LivingRendersCarousel() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mb-16"
+        className="mb-8"
       >
         <div className="max-w-6xl mx-auto">
           <Carousel items={cards} />
         </div>
       </motion.div>
-      <div className="flex justify-center mt-16">
+      <div className="flex justify-center mt-4">
         <Link href="/how-it-works" className="inline-block px-8 py-4 bg-gray-200 text-gray-900 font-bold text-base rounded-xl hover:bg-gray-300 transition-colors duration-200 shadow-md">
           Learn More
         </Link>
